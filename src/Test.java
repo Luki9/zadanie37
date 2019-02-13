@@ -12,7 +12,7 @@ class Test {
         System.out.println("Podaj imię osoby");
         String firstName = scanner.nextLine();
 
-        System.out.println("Podaj Nazwisko osoby");
+        System.out.println("Podaj nazwisko osoby");
         String lastName = scanner.nextLine();
 
         System.out.println("Podaj wiek ");
@@ -25,7 +25,7 @@ class Test {
         try {
             person = new Person(firstName, lastName, age, pesel);
         } catch (NullPointerException e) {
-            System.out.println("Imię/nazwisko nie może być nullem");
+            System.out.println("Imię/nazwisko ");
         } catch (NameUndfinedException e) {
             System.out.println("Niepoprawne imię/nazwisko");
 
