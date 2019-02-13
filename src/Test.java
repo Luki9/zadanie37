@@ -5,7 +5,8 @@ class Test {
 
 
         Scanner scanner = new Scanner(System.in);
-        //     Person person = new Person("Adam", "Podolski", 25, "23109030");
+           Person person = new Person("Adam", "Podolski", 25, "23109030");
+
 
         System.out.println("Podaj imię osoby");
         String firstName = scanner.nextLine();
@@ -21,21 +22,25 @@ class Test {
         String pesel = scanner.nextLine();
 
         try {
-            Person person = new Person(firstName, lastName, age, pesel);
+            person = new Person(firstName, lastName, age, pesel);
+        }
 
+        catch (NullPointerException e) {
+            System.out.println("Imię/nazwisko nie może być nullem");
+        }
 
-        } catch (NameUndfinedException e) {
-            System.out.println("Niepoprawne imię");
-
-        } catch (NameUndfinedException e) {
-            System.out.println("Niepoprawne nazwisko");
+        catch (NameUndfinedException e) {
+            System.out.println("Niepoprawne imię/nazwisko");
 
         } catch (IncorrectAgeException e) {
             System.out.println("Niepoprawny wiek");
+        }
+
+        System.out.println(person.toString());
 
 
 
         }
     }
 
-}
+

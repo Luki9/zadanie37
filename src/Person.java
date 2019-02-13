@@ -38,8 +38,8 @@ class Person {
     }
 
     public Person(String firstName, String lastName, int age, String pesel)  {
-
-        if (firstName == null || lastName == null)  new NameUndfinedException();
+        if (firstName == null || lastName == null) throw   new NullPointerException();
+        if (firstName == null || lastName == null)throw   new NameUndfinedException();
         if (firstName.length() < 2 || lastName.length() <2)  new NameUndfinedException();
         if (age < 1)  new IncorrectAgeException();
 

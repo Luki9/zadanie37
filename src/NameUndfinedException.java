@@ -1,2 +1,2 @@
-class NameUndfinedException extends Exception {
+class NameUndfinedException extends RuntimeException{
 }

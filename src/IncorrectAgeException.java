@@ -1,2 +1,3 @@
 class IncorrectAgeException extends RuntimeException {
+
 }
