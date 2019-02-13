@@ -41,7 +41,7 @@ class Person {
 
         if (firstName == null || lastName == null)  new NameUndfinedException();
         if (firstName.length() < 2 || lastName.length() <2)  new NameUndfinedException();
-        if (age < 1) throw new IncorrectAgeException();
+        if (age < 1)  new IncorrectAgeException();
 
 
         this.firstName = firstName;
