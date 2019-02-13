@@ -6,8 +6,8 @@ class Test {
 
         Scanner scanner = new Scanner(System.in);
 
-        Person person = new Person("Adam", "Podolski", 25, "23109030");
-
+       // Person person = new Person("Adam", "Podolski", 25, "23109030");
+        Person person = new Person();
 
         System.out.println("Podaj imię osoby");
         String firstName = scanner.nextLine();
