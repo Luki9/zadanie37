@@ -1,2 +1,2 @@
-class IncorrectAgeException {
+class IncorrectAgeException extends RuntimeException {
 }
