@@ -5,13 +5,15 @@
     private int age;
     private String pesel;
 
-    public Person(){}
+
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName)throws NameUndfinedException {
+        if (firstName == null || lastName == null) throw   new NullPointerException();
+        if (firstName.length() < 2 || lastName.length() <2) throw  new NameUndfinedException();
         this.firstName = firstName;
     }
 
@@ -19,7 +21,9 @@
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName)throws NameUndfinedException {
+
+
         this.lastName = lastName;
     }
 
