@@ -34,8 +34,8 @@
         return age;
     }
 
-    public void setAge(int age) {
-        if (age < 0 )throw  new IncorrectAgeException();
+    public void setAge(int age)throws  IncorrectAgeException {
+        if (age < 1 )throw  new IncorrectAgeException();
         this.age = age;
     }
 
@@ -47,7 +47,7 @@
         this.pesel = pesel;
     }
 
-    public Person(String firstName, String lastName, int age, String pesel)  {
+    public Person(String firstName, String lastName, int age, String pesel) throws NameUndfinedException, IncorrectAgeException {
         if (firstName == null || lastName == null) throw   new NullPointerException();
         if (firstName.length() < 2 || lastName.length() <2) throw  new NameUndfinedException();
         if (age < 1) throw  new IncorrectAgeException();
